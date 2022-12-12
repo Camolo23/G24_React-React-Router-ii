@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.active {
+  text-decoration: none;
+  color: red;
+  margin-left: 8px;
+  text-shadow: 2px 2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, -2px -2px 0 #000, 2px 0px 0 #000, 0px 2px 0 #000, -2px 0px 0 #000, 0px -2px 0 #000, 2px 2px 2px rgba(0, 0, 0, 0);
+}
+
+.inactive {
+  text-decoration: none;
+  color: white;
+  margin-left: 8px;
+}
