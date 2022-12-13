@@ -13,7 +13,7 @@ function Navbar() {
     return (
         <NavbarBS bg="secondary" variant="dark">
             <Container>
-                <NavbarBS.Brand href="#home">PokeStats</NavbarBS.Brand>
+                <NavbarBS.Brand href="/">PokeStats</NavbarBS.Brand>
                 <Nav className="flex-end">
                     <NavLink className={ setActiveClass } to="/" >Home</NavLink>
                     <NavLink className={ setActiveClass } to="/pokemones">Pokemones</NavLink>

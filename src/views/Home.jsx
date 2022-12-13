@@ -1,13 +1,12 @@
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-
+import { useState, useEffect } from 'react';
+import Loading from '../components/Loading';
 
 function Home() {
 
     const [info, setInfo] = useState({});
 
-    const numeroAleatorio = Math.ceil(Math.random() * 150);
+    const numeroAleatorio = Math.ceil(Math.random() * 20);
 
     useEffect(() => {
         fetch(`https://pokeapi.co/api/v2/pokemon/${numeroAleatorio}`)
@@ -17,15 +16,17 @@ function Home() {
             });
     }, []);
 
-    console.log('info :>> ', info);
+const test = info.sprites;
 
     return (
-
-        <div className='text-center'>
-            <h1 className='m-5'>Bienvenido Maestro Pokemon</h1>
-            <p>{info.name}</p>
-            <img // src={info.sprites.other.dream_world.front_default}
-                alt="" />
+        <div>
+            {test === undefined ?
+                <Loading />
+                : <div className='text-center'>
+                    <h1 className='m-5'>Bienvenido Maestro Pokemon</h1>
+                    <img src={info.sprites.other.dream_world.front_default}
+                        alt="" />
+                </div>}
         </div>
 
     )
